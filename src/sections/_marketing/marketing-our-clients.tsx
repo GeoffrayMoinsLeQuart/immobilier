@@ -5,14 +5,17 @@ import SvgColor from 'src/components/svg-color';
 import Carousel, { useCarousel } from 'src/components/carousel';
 
 import { IBrandProps } from 'src/types/brand';
+import { Grid, Typography } from '@mui/material';
+import Image from 'next/image';
 
 // ----------------------------------------------------------------------
 
 type Props = {
-  brands: IBrandProps[];
+  cities: IBrandProps[];
 };
 
-export default function MarketingOurClients({ brands }: Props) {
+export default function MarketingOurClients({ cities }: Props) {
+  console.log(cities);
   const theme = useTheme();
 
   const carousel = useCarousel({
@@ -41,16 +44,15 @@ export default function MarketingOurClients({ brands }: Props) {
       }}
     >
       <Carousel {...carousel.carouselSettings}>
-        {brands.map((brand) => (
-          <SvgColor
-            key={brand.id}
-            src={brand.image}
-            sx={{
-              width: 106,
-              height: 32,
-              color: 'text.disabled',
-            }}
-          />
+        {cities.map((city) => (
+          <Grid container spacing={2} key={city.id}>
+            <Grid xs={4} key={city.id}>
+              <Image src={city.image} alt={city.name} width={30} height={30} />
+            </Grid>
+            <Grid xs={8} key={city.id}>
+              <Typography>{city.name}</Typography>
+            </Grid>
+          </Grid>
         ))}
       </Carousel>
     </Container>

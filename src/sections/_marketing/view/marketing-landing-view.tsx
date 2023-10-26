@@ -2,6 +2,7 @@
 
 import {
   _brands,
+  _cities,
   _members,
   _caseStudies,
   _testimonials,
@@ -30,7 +31,7 @@ export default function MarketingLandingView() {
     <>
       <MarketingLandingHero />
 
-      <MarketingOurClients brands={_brands} />
+      <MarketingOurClients cities={_cities} />
 
       <MarketingLandingAbout />
 

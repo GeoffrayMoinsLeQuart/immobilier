@@ -24,6 +24,10 @@ import Searchbar from '../common/searchbar';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
 import SettingsButton from '../common/settings-button';
+import BaseOptions from 'src/components/settings/drawer/base-options';
+import { useSettingsContext } from 'src/components/settings';
+import Iconify from 'src/components/iconify';
+import IconButton from '@mui/material/IconButton';
 
 // ----------------------------------------------------------------------
 
@@ -33,6 +37,8 @@ type Props = {
 
 export default function Header({ headerOnDark }: Props) {
   const theme = useTheme();
+
+  const settings = useSettingsContext();
 
   const offset = useOffSetTop();
 
@@ -57,7 +63,7 @@ export default function Header({ headerOnDark }: Props) {
               position: 'absolute',
             }}
           >
-      v2.3.0
+            v2.3.0
           </Label>
         </Link>
       </Box>
@@ -72,9 +78,17 @@ export default function Header({ headerOnDark }: Props) {
 
       <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
         <Stack spacing={1} direction="row" alignItems="center">
-          <Searchbar />
-
-          <SettingsButton />
+          <IconButton
+            color="inherit"
+            aria-label="theme-mode"
+            onClick={() =>
+              settings.onUpdate('themeMode', settings.themeMode === 'dark' ? 'light' : 'dark')
+            }
+          >
+            <Iconify
+              icon={settings.themeMode === 'dark' ? 'carbon:asleep' : 'carbon:asleep-filled'}
+            />
+          </IconButton>
         </Stack>
 
         {mdUp && (
@@ -85,7 +99,7 @@ export default function Header({ headerOnDark }: Props) {
             target="_blank"
             rel="noopener"
           >
-            Buy Now
+            Prenez RDV
           </Button>
         )}
       </Stack>

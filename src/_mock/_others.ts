@@ -87,6 +87,23 @@ const BRANDS_NAME = [
   'vimeo',
 ];
 
+const CITIES_NAME = [
+  'Mulhouse',
+  'Colmar',
+  'Saint-Louis',
+  'Cernay',
+  'Belfort',
+  'Wittenheim',
+  'Illzach',
+  'Altkirch',
+];
+
+export const _cities = CITIES_NAME.map((city, index) => ({
+  id: _mock.id(index),
+  name: city,
+  image: `/assets/logo/city/${city}.svg`,
+}));
+
 export const _brands = BRANDS_NAME.map((brand, index) => ({
   id: _mock.id(index),
   name: brand,

@@ -59,7 +59,7 @@ export default function NavMobile({ data }: NavProps) {
 
           <Stack spacing={1.5} sx={{ p: 3 }}>
             <Button fullWidth variant="contained" color="inherit">
-              Buy Now
+              Prenez RDV
             </Button>
           </Stack>
         </Scrollbar>

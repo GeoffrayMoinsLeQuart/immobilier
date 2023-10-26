@@ -43,22 +43,20 @@ export default function MarketingLandingHero() {
           <Grid
             xs={12}
             md={6}
-            lg={5}
             sx={{
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
             <Typography variant="overline" sx={{ color: 'secondary.main' }}>
-              Digital Marketing
+              Investir l'esprit tranquille
             </Typography>
 
             <Typography variant="h1" sx={{ my: 3 }}>
-              Boosts Your Website Traffic
+              Assurez vous un revenu passif avec l'immobilier locatif
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis
-              venenatis ante odio sit amet eros.
+              Nous nous chargeons de toutes les étapes. <br></br>Bénéficiez d'un accompagnement personnalisé pour toutes les étapes de votre projet.
             </Typography>
 
             <Stack
@@ -69,7 +67,7 @@ export default function MarketingLandingHero() {
               sx={{ mt: 5 }}
             >
               <Button variant="contained" color="inherit" size="large">
-                Try For Free
+                Prenez RDV
               </Button>
 
               <Stack direction="row" alignItems="center" sx={{ typography: 'h6' }}>
@@ -82,7 +80,7 @@ export default function MarketingLandingHero() {
           </Grid>
 
           {mdUp && (
-            <Grid xs={12} md={6} lg={7}>
+            <Grid xs={12} md={6} >
               <Image
                 visibleByDefault
                 disabledEffect

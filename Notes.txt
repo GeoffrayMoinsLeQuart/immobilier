@@ -4,3 +4,48 @@ Travaux
 ameublement
 
 totale
+
+
+
+
+A garder : 
+
+Landing
+
+PRICING PLANS
+Still Have Questions? http://localhost:8002/
+
+
+
+    http://localhost:8002/marketing/
+        Who We Are
+        We Provide
+        Working Process
+        Case Studies  ==> Use FEATURED JOBS from http://localhost:8002/career/      OR Featured Courses from http://localhost:8002/e-learning/
+        Check Our Pricing
+        FAQS
+        Who Love Our Work    OR What Our Customer Say    from http://localhost:8002/e-learning/
+        Latest Posts
+
+
+        http://localhost:8002/marketing/services/
+        Offline SEO
+        Services Include
+        Benefits Achieved
+        How It Works
+
+
+About
+
+    http://localhost:8002/marketing/about/
+
+
+Contact
+
+    http://localhost:8002/marketing/contact/
+
+
+Ajouter la page login
+PRICING
+Simulateur
+Newsletter
