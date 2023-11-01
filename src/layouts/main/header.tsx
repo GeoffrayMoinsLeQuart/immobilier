@@ -17,17 +17,15 @@ import { bgBlur } from 'src/theme/css';
 import Logo from 'src/components/logo';
 import Label from 'src/components/label';
 
+import Iconify from 'src/components/iconify';
+import IconButton from '@mui/material/IconButton';
+import { useSettingsContext } from 'src/components/settings';
+
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
 import { HEADER } from '../config-layout';
-import Searchbar from '../common/searchbar';
 import { navConfig } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
-import SettingsButton from '../common/settings-button';
-import BaseOptions from 'src/components/settings/drawer/base-options';
-import { useSettingsContext } from 'src/components/settings';
-import Iconify from 'src/components/iconify';
-import IconButton from '@mui/material/IconButton';
 
 // ----------------------------------------------------------------------
 

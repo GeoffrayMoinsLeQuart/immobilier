@@ -1,5 +1,7 @@
 // ----------------------------------------------------------------------
 
+import { formatCurrency } from 'src/utils/format-number';
+
 export const _pricingHome = [
   {
     license: 'Standard',
@@ -47,37 +49,52 @@ export const _pricingHome = [
   },
 ];
 
+const tarif = `à partir de ${formatCurrency(4000, 0)}`;
+
 export const _pricingMarketing = [
   {
     license: 'Basic',
-    price: '29',
+    price: formatCurrency(4000, 0),
     icon: '/assets/icons/pricing/ic_plan_basic03.svg',
-    caption: 'Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien',
-    options: ['Auto update mode', 'Online operator 24/7', 'International posting'],
+    caption: 'Nous trouvons le bien idéal pour vous',
+    options: [
+      'Recherche et selection du bien idéal',
+      'Vérification de la viabilité financière du projet',
+      'Information sur les travaux à réaliser ou à venir',
+      "Simulation comptable sur la durée de l'emprunt",
+    ],
   },
   {
     license: 'Starter',
-    price: '59',
+    price: tarif,
     icon: '/assets/icons/pricing/ic_plan_starter03.svg',
-    caption: 'Sed lectus. Sed consequat, leo eget bibendum sodales',
+    caption:
+      'Avec cette formule, vous recevrez un bien clés en main qui correspond aux besoins du marchés',
     options: [
-      'Auto update mode',
-      'Online operator 24/7',
-      'Unique newsletters',
-      'International posting',
+      'Recherche et selection du bien idéal',
+      'Vérification de la viabilité financière du projet',
+      'Information sur les travaux à réaliser ou à venir',
+      "Direction des travaux de l'appartement",
+      "Ameublement et mise en valeur de l'appartement",
+      "Photographies professionnelles de l'appartement",
+      "Simulation comptable sur la durée de l'emprunt",
     ],
   },
   {
     license: 'Premium',
-    price: '99',
+    price: tarif,
     icon: '/assets/icons/pricing/ic_plan_premium03.svg',
-    caption: 'Maecenas nec odio et ante tincidunt tempus.',
+    caption:
+      "Nous vous accompagnons sur la création d'un bien d'exception afin de tirer vos revenus vers le haut",
     options: [
-      'Auto update mode',
-      'Online operator 24/7',
-      'Unique newsletters',
-      'International posting',
-      '20 Design templates',
+      'Recherche et selection du bien idéal',
+      'Vérification de la viabilité financière du projet',
+      "Prestation d'architecture d'intérieur et de décoration",
+      'Information sur les travaux à réaliser ou à venir',
+      "Direction des travaux de l'appartement",
+      "Ameublement de l'appartement",
+      "Photographies professionnelles de l'appartement",
+      "Simulation comptable sur la durée de l'emprunt",
     ],
   },
 ];

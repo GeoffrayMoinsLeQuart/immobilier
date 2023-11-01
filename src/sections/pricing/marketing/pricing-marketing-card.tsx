@@ -8,6 +8,7 @@ import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
 
 import { IPricingMarketingProps } from 'src/types/pricing';
+import { formatCurrency } from 'src/utils/format-number';
 
 // ----------------------------------------------------------------------
 
@@ -46,9 +47,8 @@ export default function PricingMarketingCard({ plan }: Props) {
           </Typography>
 
           <Stack direction="row" alignItems="center" spacing={0.5}>
-            <Typography variant="h3" component="span">{`$${plan.price}`}</Typography>
-            <Typography variant="h5" component="span" sx={{ color: 'text.disabled' }}>
-              /mo
+            <Typography variant="h3" component="span">
+              {plan.price}
             </Typography>
           </Stack>
         </div>

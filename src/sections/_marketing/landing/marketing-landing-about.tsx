@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -9,25 +8,24 @@ import Typography from '@mui/material/Typography';
 import { fShortenNumber } from 'src/utils/format-number';
 
 import Image from 'src/components/image';
-import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
 
 const ROWS = [
   {
-    label: 'projects',
-    total: 20,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    label: 'projets',
+    total: 10,
+    content: 'De beaux projets avec une belle rentabilité',
   },
   {
-    label: 'Happy clients',
-    total: 32000,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    label: 'Clients satisfaits',
+    total: 10,
+    content: 'Nos clients parlent de nous',
   },
   {
-    label: 'years of experience',
-    total: 20,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    label: "années d'experience",
+    total: 3,
+    content: 'Que nous mettons à votre service',
   },
 ];
 
@@ -64,28 +62,29 @@ export default function MarketingLandingAbout() {
           }}
         >
           <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-            About us
+            A notre sujet
           </Typography>
 
           <Typography variant="h2" sx={{ my: 3 }}>
-            Who We Are
+            Qui sommes nous
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            In hac habitasse platea dictumst. Aliquam lobortis. Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. In dui magna, posuere eget, vestibulum et, tempor auctor,
-            justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas.
+            La Maison du Loueur est une entreprise spécialisée dans l&apos;investissement immobilier
+            locatif. Nous nous chargeons de toutes les étapes du processus, de la recherche du bien
+            immobilier à son ameublement. Notre objectif est d&apos;aider les investisseurs à réussir
+            leur investissement immobilier locatif. Nous proposons une gamme de services clé en
+            main.
           </Typography>
 
-          <Button
+          {/* <Button
             size="large"
             color="inherit"
             endIcon={<Iconify icon="carbon:chevron-right" />}
             sx={{ my: 5 }}
           >
             Lean more
-          </Button>
+          </Button> */}
         </Grid>
 
         <Grid xs={12} md={6}>

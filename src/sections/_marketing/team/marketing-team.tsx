@@ -85,16 +85,15 @@ export default function MarketingTeam({ members }: Props) {
           <Grid xs={12} md={4}>
             <Stack spacing={3} sx={{ textAlign: { xs: 'center', md: 'unset' } }}>
               <Typography variant="overline" sx={{ color: 'grey.600' }}>
-                Team
+                Equipe
               </Typography>
 
               <Typography variant="h2" sx={{ color: 'primary.main' }}>
-                Meet Our Team
+                Rencontrez notre équipe
               </Typography>
 
               <Typography sx={{ color: 'common.white' }}>
-                Since wire-frame renderings are relatively simple and fast to calculate, they are
-                often used in cases
+                Nous vous offrons toutes les expértises nécessaires, du travail manuel à l&apos;intellectuel
               </Typography>
             </Stack>
           </Grid>

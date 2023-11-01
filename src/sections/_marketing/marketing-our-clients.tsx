@@ -1,7 +1,6 @@
 import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
 
-import SvgColor from 'src/components/svg-color';
 import Carousel, { useCarousel } from 'src/components/carousel';
 
 import { IBrandProps } from 'src/types/brand';
@@ -15,7 +14,6 @@ type Props = {
 };
 
 export default function MarketingOurClients({ cities }: Props) {
-  console.log(cities);
   const theme = useTheme();
 
   const carousel = useCarousel({
@@ -45,11 +43,17 @@ export default function MarketingOurClients({ cities }: Props) {
     >
       <Carousel {...carousel.carouselSettings}>
         {cities.map((city) => (
-          <Grid container spacing={2} key={city.id}>
-            <Grid xs={4} key={city.id}>
-              <Image src={city.image} alt={city.name} width={30} height={30} />
+          <Grid
+            container
+            spacing={2}
+            key={city.id}
+            sx={{ display: 'flex !important', flexDirection: 'row !important' }}
+            component="span"
+          >
+            <Grid item xs={4} component="span">
+              <Image src={city.image} alt={city.name} width={24} height={24} />
             </Grid>
-            <Grid xs={8} key={city.id}>
+            <Grid item xs={8} component="span">
               <Typography>{city.name}</Typography>
             </Grid>
           </Grid>

@@ -37,3 +37,10 @@ function result(format: string, key = '.00') {
 
   return isInteger ? format.replace(key, '') : format;
 }
+
+export const formatCurrency = (amount: string | number, decimalNumber: number = 2) =>
+  Number(amount).toLocaleString('fr-FR', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: decimalNumber,
+  });

@@ -8,6 +8,11 @@ totale
 
 
 
+Revoir la partie team avec toutes les photos et demander autorisation des autres parties
+
+
+
+
 A garder : 
 
 Landing
@@ -18,9 +23,7 @@ Still Have Questions? http://localhost:8002/
 
 
     http://localhost:8002/marketing/
-        Who We Are
-        We Provide
-        Working Process
+
         Case Studies  ==> Use FEATURED JOBS from http://localhost:8002/career/      OR Featured Courses from http://localhost:8002/e-learning/
         Check Our Pricing
         FAQS

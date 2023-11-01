@@ -18,27 +18,28 @@ const COLORS = ['primary', 'secondary', 'success', 'warning'] as const;
 
 const SERVICES = [
   {
-    name: 'SEO',
+    name: 'Selection',
     icon: '/assets/icons/service/ic_service_seo.svg',
-    content: 'Nunc nonummy metus. Donec elit libero',
+    content: 'Nous recherchons le bien correspondant à vos critères et nogocions son prix',
     path: paths.marketing.services,
   },
   {
-    name: 'Email Marketing',
+    name: 'Vérification de la durabilité du projet',
     icon: '/assets/icons/service/ic_service_mail.svg',
-    content: 'Nunc nonummy metus. Donec elit libero',
+    content: 'Nous analysons les coûts cachés ainsi que les travaux à venir',
     path: paths.marketing.services,
   },
   {
-    name: 'Search Engine Oprimization',
+    name: 'Direction des travaux',
     icon: '/assets/icons/service/ic_service_analysis.svg',
-    content: 'Nunc nonummy metus. Donec elit libero',
+    content:
+      "Nous dirigeons les travaux de A à Z et vous envoyons des photos réguliérement de l'avancement",
     path: paths.marketing.services,
   },
   {
-    name: 'Social Marketing',
+    name: 'Mise en valeur',
     icon: '/assets/icons/service/ic_service_bullhorn.svg',
-    content: 'Nunc nonummy metus. Donec elit libero',
+    content: 'Nous meublons le bien et vous offrons des photographies professionnelles',
     path: paths.marketing.services,
   },
 ];
@@ -62,13 +63,15 @@ export default function MarketingLandingServices() {
         }}
       >
         <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-          Our Services
+          Nos Services
         </Typography>
 
-        <Typography variant="h2">We Provide</Typography>
+        <Typography variant="h2">Nous fournissons</Typography>
 
         <Typography sx={{ color: 'text.secondary' }}>
-          Nunc nonummy metus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.
+          Un accompagnement total pour la selection de votre investissement locatif. Nous discutons
+          de la viabilité de votre projets ainsi que des options qui vous intéressent. Pour plus
+          d&apos;information, cliquez sur l&apos;une des vignettes dessous.
         </Typography>
       </Stack>
 
@@ -121,6 +124,8 @@ function ServiceItem({ service, index }: ServiceItemProps) {
           boxShadow: (theme) => ({ md: theme.customShadows.z24 }),
         }),
       }}
+      component={RouterLink}
+      href={path}
     >
       <SvgColor
         src={icon}

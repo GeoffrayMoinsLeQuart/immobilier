@@ -90,8 +90,6 @@ const BRANDS_NAME = [
 const CITIES_NAME = [
   'Mulhouse',
   'Colmar',
-  'Saint-Louis',
-  'Cernay',
   'Belfort',
   'Wittenheim',
   'Illzach',

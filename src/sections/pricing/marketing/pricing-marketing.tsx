@@ -38,23 +38,15 @@ export default function PricingMarketing({ plans }: Props) {
           }}
         >
           <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-            Pricing
+            Tarifs
           </Typography>
 
-          <Typography variant="h2">Check Our Pricing</Typography>
+          <Typography variant="h2">Découvrez nos tarifs</Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            Choose the perfect plan for your needs.
-            <br /> Always flexible to grow
+            Choisissez le plan idéal pour vos besoins.
+            <br /> Vous aurez toujours la possibilité de le modifier
           </Typography>
-        </Stack>
-
-        <Stack direction="row" alignItems="center">
-          <Typography variant="overline">MONTHLY</Typography>
-
-          <Switch defaultChecked />
-
-          <Typography variant="overline">YEARLY (save 10%)</Typography>
         </Stack>
       </Stack>
 

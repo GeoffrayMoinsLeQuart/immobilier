@@ -48,15 +48,17 @@ export default function MarketingLandingHero() {
             }}
           >
             <Typography variant="overline" sx={{ color: 'secondary.main' }}>
-              Investir l'esprit tranquille
+              Investir l&apos;esprit tranquille
             </Typography>
 
             <Typography variant="h1" sx={{ my: 3 }}>
-              Assurez vous un revenu passif avec l'immobilier locatif
+              Assurez vous un revenu passif avec l&apos;immobilier locatif
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              Nous nous chargeons de toutes les étapes. <br></br>Bénéficiez d'un accompagnement personnalisé pour toutes les étapes de votre projet.
+              Nous nous chargeons de toutes les étapes. <br />
+              Bénéficiez d&apos;un accompagnement personnalisé pour toutes les étapes de votre
+              projet.
             </Typography>
 
             <Stack
@@ -80,7 +82,7 @@ export default function MarketingLandingHero() {
           </Grid>
 
           {mdUp && (
-            <Grid xs={12} md={6} >
+            <Grid xs={12} md={6}>
               <Image
                 visibleByDefault
                 disabledEffect
