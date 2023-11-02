@@ -87,14 +87,7 @@ const BRANDS_NAME = [
   'vimeo',
 ];
 
-const CITIES_NAME = [
-  'Mulhouse',
-  'Colmar',
-  'Belfort',
-  'Wittenheim',
-  'Illzach',
-  'Altkirch',
-];
+const CITIES_NAME = ['Mulhouse', 'Colmar', 'Belfort', 'Wittenheim', 'Illzach', 'Altkirch'];
 
 export const _cities = CITIES_NAME.map((city, index) => ({
   id: _mock.id(index),
@@ -117,17 +110,28 @@ export const _brandsColor = BRANDS_NAME.map((brand, index) => ({
 // ----------------------------------------------------------------------
 
 export const _faqs = [
-  'Sed augue ipsum, egestas nec, vestibulum et',
-  'alesuada adipiscing, dui vestibulum suscipit nulla quis orci.',
-  'Ut varius tincidunt libero',
-  'In ut quam vitae odio lacinia tincidunt.',
-  'Fusce vel dui Morbi nec metus.',
-].map((question, index) => ({
-  id: _mock.id(index),
-  question,
-  answer:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
-}));
+  {
+    question: 'Pourquoi mettez-vous en avant la partie négociation ?',
+    answer:
+      "Nous vous promettons une baisse du prix du bien au minimum égale au montant de notre prestation (pour l'offre basic seulement). Nos compétence d'analyse, notre réseau ainsi que nos relations nous permettent d'obtenir ce genre de prestation",
+  },
+  {
+    question: 'Qu\'entendez vous par "Vérification de la viabilité financière du projet"',
+    answer: 'Nous nous engageons avec vous que sur des biens qui s\'autoremboursent ou qui générent du revenu. Nous pouvons envisager d\'autres biens si vos besoins sont spécifiques.',
+  },
+  {
+    question: 'Pourquoi mettez-vous en avant la partie négociation ?',
+    answer: 'Pourquoi mettez-vous en avant la partie négociation ?',
+  },
+  {
+    question: 'Pourquoi mettez-vous en avant la partie négociation ?',
+    answer: 'Pourquoi mettez-vous en avant la partie négociation ?',
+  },
+  {
+    question: 'Pourquoi mettez-vous en avant la partie négociation ?',
+    answer: 'Pourquoi mettez-vous en avant la partie négociation ?',
+  },
+];
 
 export const _faqsSupport = [
   `[Covid] Seasonal Shopping Guide`,

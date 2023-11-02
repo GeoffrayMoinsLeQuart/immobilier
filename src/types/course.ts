@@ -32,12 +32,18 @@ export type ICourseByCategoryProps = {
 export type ICourseProps = {
   id: string;
   slug: string;
-  price: number;
+  price?: number;
   level: string;
   createdAt: Date;
   coverUrl: string;
   category: string;
   skills: string[];
+  profitability?: number;
+  totalCost?: number;
+  ourCost?: number;
+  rentPrice?: number;
+  projectDuration?: number;
+  projectFormulaChosen?: string;
   priceSale: number;
   resources: number;
   totalHours: number;

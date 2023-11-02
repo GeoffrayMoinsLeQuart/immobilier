@@ -52,9 +52,9 @@ export default function ElearningLandingFeaturedCourses({ courses }: Props) {
         }}
       >
         <Stack spacing={3} flexGrow={1}>
-          <Typography variant="h2">Featured Courses</Typography>
+          <Typography variant="h2">Nos projets</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Nullam accumsan lorem in dui. Praesent ac massa at ligula laoreet iaculis.
+            Découvrez nos récents projets ainsi que leurs profitabilité
           </Typography>
         </Stack>
 

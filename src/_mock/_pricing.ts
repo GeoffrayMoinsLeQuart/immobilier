@@ -59,6 +59,7 @@ export const _pricingMarketing = [
     caption: 'Nous trouvons le bien idéal pour vous',
     options: [
       'Recherche et selection du bien idéal',
+      'Négociation du prix',
       'Vérification de la viabilité financière du projet',
       'Information sur les travaux à réaliser ou à venir',
       "Simulation comptable sur la durée de l'emprunt",
@@ -69,9 +70,10 @@ export const _pricingMarketing = [
     price: tarif,
     icon: '/assets/icons/pricing/ic_plan_starter03.svg',
     caption:
-      'Avec cette formule, vous recevrez un bien clés en main qui correspond aux besoins du marchés',
+    'Avec cette formule, vous recevrez un bien clés en main qui correspond aux besoins du marchés',
     options: [
       'Recherche et selection du bien idéal',
+      'Négociation du prix',
       'Vérification de la viabilité financière du projet',
       'Information sur les travaux à réaliser ou à venir',
       "Direction des travaux de l'appartement",
@@ -85,9 +87,10 @@ export const _pricingMarketing = [
     price: tarif,
     icon: '/assets/icons/pricing/ic_plan_premium03.svg',
     caption:
-      "Nous vous accompagnons sur la création d'un bien d'exception afin de tirer vos revenus vers le haut",
+    "Nous vous accompagnons sur la création d'un bien d'exception afin de tirer vos revenus vers le haut",
     options: [
       'Recherche et selection du bien idéal',
+      'Négociation du prix',
       'Vérification de la viabilité financière du projet',
       "Prestation d'architecture d'intérieur et de décoration",
       'Information sur les travaux à réaliser ou à venir',

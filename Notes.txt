@@ -13,15 +13,6 @@ Revoir la partie team avec toutes les photos et demander autorisation des autres
 
 
 
-A garder : 
-
-Landing
-
-PRICING PLANS
-Still Have Questions? http://localhost:8002/
-
-
-
     http://localhost:8002/marketing/
 
         Case Studies  ==> Use FEATURED JOBS from http://localhost:8002/career/      OR Featured Courses from http://localhost:8002/e-learning/

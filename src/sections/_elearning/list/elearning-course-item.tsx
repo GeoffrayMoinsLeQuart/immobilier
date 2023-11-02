@@ -25,22 +25,48 @@ type Props = {
   vertical?: boolean;
 };
 
+function SlackUnit({ title, amount }: { title: string; amount?: number }) {
+  return (
+    <Stack
+      spacing={1.5}
+      direction="row"
+      alignItems="center"
+      flexWrap="wrap"
+      divider={<Divider orientation="vertical" sx={{ height: 20, my: 'auto' }} />}
+    >
+      <Stack spacing={0.5} direction="row" alignItems="center">
+        <Iconify icon="carbon:star-filled" sx={{ color: 'warning.main' }} />
+        <Typography variant="body2" sx={{ ml: 1, mr: 0.5 }}>
+          {title}
+        </Typography>
+        <Box sx={{ typography: 'h6' }}></Box>
+        <Stack direction="row" sx={{ typography: 'subtitle2' }}>
+          {amount && amount}
+        </Stack>
+      </Stack>
+    </Stack>
+  );
+}
+
 export default function ElearningCourseItem({ course, vertical }: Props) {
   const {
     slug,
     level,
-    price,
+    profitability,
     teachers,
     coverUrl,
     category,
-    priceSale,
+    totalCost,
+    ourCost,
+    rentPrice,
+    projectDuration,
+    projectFormulaChosen,
     bestSeller,
     totalHours,
     description,
-    ratingNumber,
-    totalReviews,
-    totalStudents,
   } = course;
+
+  console.log(course);
 
   return (
     <Card
@@ -96,21 +122,7 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
               {category}
             </Typography>
 
-            <Typography variant="h4">
-              {priceSale > 0 && (
-                <Box
-                  component="span"
-                  sx={{
-                    mr: 0.5,
-                    color: 'text.disabled',
-                    textDecoration: 'line-through',
-                  }}
-                >
-                  {fCurrency(priceSale)}
-                </Box>
-              )}
-              {fCurrency(price)}
-            </Typography>
+            <Typography variant="h4">{profitability + '%'}</Typography>
           </Stack>
 
           <Stack spacing={1}>
@@ -134,33 +146,8 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
           </Stack>
         </Stack>
 
-        <Stack
-          spacing={1.5}
-          direction="row"
-          alignItems="center"
-          flexWrap="wrap"
-          divider={<Divider orientation="vertical" sx={{ height: 20, my: 'auto' }} />}
-        >
-          <Stack spacing={0.5} direction="row" alignItems="center">
-            <Iconify icon="carbon:star-filled" sx={{ color: 'warning.main' }} />
-            <Box sx={{ typography: 'h6' }}>
-              {Number.isInteger(ratingNumber) ? `${ratingNumber}.0` : ratingNumber}
-            </Box>
-
-            {totalReviews && (
-              <Link variant="body2" sx={{ color: 'text.secondary' }}>
-                ({fShortenNumber(totalReviews)} reviews)
-              </Link>
-            )}
-          </Stack>
-
-          <Stack direction="row" sx={{ typography: 'subtitle2' }}>
-            {fShortenNumber(totalStudents)}
-            <Box component="span" typography="body2" sx={{ ml: 0.5 }}>
-              students
-            </Box>
-          </Stack>
-        </Stack>
+        <SlackUnit title="Coût total" amount={totalCost} />
+        <SlackUnit title="Location mensuelle" amount={rentPrice} />
 
         <Stack direction="row" alignItems="center">
           <Avatar src={teachers[0]?.avatarUrl} />
@@ -190,22 +177,25 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
           direction="row"
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="space-around" 
           sx={{ color: 'text.disabled', '& > *:not(:last-child)': { mr: 2.5 } }}
         >
           <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-            <Iconify icon="carbon:time" sx={{ mr: 1 }} /> {`${totalHours} hours`}
+            <Iconify icon="carbon:time" sx={{ mr: 1 }} /> {`${projectDuration} jours`}
           </Stack>
 
           <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-            <Iconify
-              icon={
-                (level === 'Beginner' && 'carbon:skill-level-basic') ||
-                (level === 'Intermediate' && 'carbon:skill-level-intermediate') ||
-                'carbon:skill-level-advanced'
+            <Image
+              alt="icon"
+              src={
+                (projectFormulaChosen === 'basic' && '/assets/icons/pricing/ic_plan_basic03.svg') ||
+                (projectFormulaChosen === 'starter' &&
+                  '/assets/icons/pricing/ic_plan_starter03.svg') ||
+                '/assets/icons/pricing/ic_plan_premium03.svg'
               }
-              sx={{ mr: 1 }}
+              sx={{ mr: 1, width: 20, height: 20 }}
             />
-            {level}
+            plan : {projectFormulaChosen}
           </Stack>
         </Stack>
       </Stack>

@@ -51,9 +51,9 @@ export default function MarketingLandingFaqs() {
             <Typography variant="h2">Questions fréquemment posées</Typography>
           </Stack>
 
-          {_faqs.map((faq) => (
+          {_faqs.map((faq, index) => (
             <Accordion
-              key={faq.id}
+              key={index}
               expanded={expanded === faq.question}
               onChange={handleChangeExpanded(faq.question)}
             >
@@ -99,7 +99,8 @@ export default function MarketingLandingFaqs() {
 
             <m.div variants={varFade().inUp}>
               <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-              Veuillez décrire au mieux votre question afin de recevoir les conseils les plus précis.
+                Veuillez décrire au mieux votre question afin de recevoir les conseils les plus
+                précis.
               </Typography>
             </m.div>
 

@@ -8,6 +8,7 @@ import {
   _testimonials,
   _marketingPosts,
   _pricingMarketing,
+  _courses,
 } from 'src/_mock';
 
 import MarketingTeam from '../team/marketing-team';
@@ -23,23 +24,22 @@ import MarketingLandingFreeSEO from '../landing/marketing-landing-free-seo';
 import MarketingLandingServices from '../landing/marketing-landing-services';
 import BlogMarketingLatestPosts from '../../blog/marketing/marketing-latest-posts';
 import MarketingLandingCaseStudies from '../landing/marketing-landing-case-studies';
+import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
 
 // ----------------------------------------------------------------------
 
 export default function MarketingLandingView() {
   return (
     <>
-      <MarketingLandingHero />
+      {/* <MarketingLandingHero />
 
       <MarketingOurClients cities={_cities} />
 
       <MarketingLandingAbout />
 
-      <MarketingLandingServices />
+      <MarketingLandingServices /> */}
 
-      {/* <MarketingLandingProcess /> */}
-
-      <MarketingLandingCaseStudies caseStudies={_caseStudies.slice(-6)} />
+      <ElearningLandingFeaturedCourses courses={_courses} />
 
       <MarketingTeam members={_members} />
 
@@ -48,10 +48,6 @@ export default function MarketingLandingView() {
       <MarketingLandingFaqs />
 
       <MarketingTestimonial testimonials={_testimonials} />
-
-      {/* <BlogMarketingLatestPosts posts={_marketingPosts.slice(0, 4)} /> */}
-
-      {/* <MarketingLandingFreeSEO /> */}
 
       <MarketingNewsletter />
     </>
