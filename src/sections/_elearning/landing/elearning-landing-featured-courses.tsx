@@ -11,14 +11,16 @@ import Carousel, { useCarousel, CarouselArrows } from 'src/components/carousel';
 import { ICourseProps } from 'src/types/course';
 
 import ElearningCourseItem from '../list/elearning-course-item';
+import { IProjet } from 'src/_mock/projets';
 
 // ----------------------------------------------------------------------
 
 type Props = {
-  courses: ICourseProps[];
+  projects: IProjet[];
 };
 
-export default function ElearningLandingFeaturedCourses({ courses }: Props) {
+export default function ElearningLandingFeaturedCourses({ projects }: Props) {
+  console.log(projects);
   const theme = useTheme();
 
   const carousel = useCarousel({
@@ -93,18 +95,19 @@ export default function ElearningLandingFeaturedCourses({ courses }: Props) {
           }}
         >
           <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
-            {courses.map((course) => (
-              <Box
-                key={course.id}
-                sx={{
-                  px: 2,
-                  pt: { xs: 8, md: 10 },
-                  pb: { xs: 10, md: 15 },
-                }}
-              >
-                <ElearningCourseItem course={course} vertical />
-              </Box>
-            ))}
+            {projects &&
+              projects.map((project) => (
+                <Box
+                  key={project.id}
+                  sx={{
+                    px: 2,
+                    pt: { xs: 8, md: 10 },
+                    pb: { xs: 10, md: 15 },
+                  }}
+                >
+                  <ElearningCourseItem project={project} vertical />
+                </Box>
+              ))}
           </Carousel>
         </CarouselArrows>
       </Box>

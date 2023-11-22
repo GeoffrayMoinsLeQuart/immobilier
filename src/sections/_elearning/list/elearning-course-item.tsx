@@ -17,11 +17,14 @@ import Iconify from 'src/components/iconify';
 import TextMaxLine from 'src/components/text-max-line';
 
 import { ICourseProps } from 'src/types/course';
+import { IconButton, Tooltip } from '@mui/material';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { IProjet } from 'src/_mock/projets';
 
 // ----------------------------------------------------------------------
 
 type Props = {
-  course: ICourseProps;
+  project: IProjet;
   vertical?: boolean;
 };
 
@@ -48,25 +51,47 @@ function SlackUnit({ title, amount }: { title: string; amount?: number }) {
   );
 }
 
-export default function ElearningCourseItem({ course, vertical }: Props) {
+export default function ElearningCourseItem({ project, vertical }: Props) {
   const {
-    slug,
-    level,
-    profitability,
-    teachers,
-    coverUrl,
-    category,
-    totalCost,
-    ourCost,
-    rentPrice,
-    projectDuration,
-    projectFormulaChosen,
-    bestSeller,
-    totalHours,
+    id,
+    title,
     description,
-  } = course;
+    fullAddress,
+    type_habitation,
+    superficie,
+    particularites,
+    etage,
+    prix_achat,
+    frais_agence,
+    cout_notaire,
+    cout_mobilier,
+    cout_travaux,
+    frais_banque,
+    frais_banque_garantie,
+    montant_pret,
+    taux_interet,
+    duree_pret,
+    taux_assurance,
+    loyer_mensuel,
+    taxe_fonciere,
+    charge_copro,
+    frais_comptable,
+    assurance_pno,
+    assurance_gli,
+    cfe,
+    autres_charges,
+    chauffage,
+    dpe,
+    ges,
+    duree_projet_apres_signature,
+    formule_choisie,
+    images_avant,
+    images_apres,
+    rentabilite_nette,
+    rentabilite_brute
+  } = project;
 
-  console.log(course);
+  console.log(project);
 
   return (
     <Card
@@ -82,8 +107,8 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
     >
       <Box sx={{ flexShrink: { sm: 0 } }}>
         <Image
-          alt={slug}
-          src={coverUrl}
+          alt={id.toString()}
+          src={images_apres.chambre1![0]}
           sx={{
             height: 1,
             objectFit: 'cover',
@@ -95,7 +120,7 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
         />
       </Box>
 
-      {bestSeller && (
+      {/* {bestSeller && (
         <Label
           color="warning"
           variant="filled"
@@ -108,7 +133,7 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
         >
           Best Seller
         </Label>
-      )}
+      )} */}
 
       <Stack spacing={3} sx={{ p: 3 }}>
         <Stack
@@ -119,16 +144,21 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
         >
           <Stack direction="row" alignItems="center" justifyContent="space-between">
             <Typography variant="overline" sx={{ color: 'primary.main' }}>
-              {category}
+              {type_habitation}
             </Typography>
 
-            <Typography variant="h4">{profitability + '%'}</Typography>
+            <Tooltip title="Rentabilité nette du projet" sx={{ cursor: 'pointer' }}>
+              <Typography variant="h4">{rentabilite_nette + '%'}</Typography>
+            </Tooltip>
+            <Tooltip title="Rentabilité brute du projet" sx={{ cursor: 'pointer' }}>
+              <Typography variant="h4">{rentabilite_brute + '%'}</Typography>
+            </Tooltip>
           </Stack>
 
           <Stack spacing={1}>
             <Link component={RouterLink} href={paths.eLearning.course} color="inherit">
               <TextMaxLine variant="h6" line={1}>
-                {slug}
+                {title}
               </TextMaxLine>
             </Link>
 
@@ -146,10 +176,10 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
           </Stack>
         </Stack>
 
-        <SlackUnit title="Coût total" amount={totalCost} />
-        <SlackUnit title="Location mensuelle" amount={rentPrice} />
+        <SlackUnit title="Coût total" amount={prix_achat} />
+        <SlackUnit title="Location mensuelle" amount={loyer_mensuel} />
 
-        <Stack direction="row" alignItems="center">
+        {/* <Stack direction="row" alignItems="center">
           <Avatar src={teachers[0]?.avatarUrl} />
 
           <Typography variant="body2" sx={{ ml: 1, mr: 0.5 }}>
@@ -160,8 +190,8 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
             <Link underline="always" color="text.secondary" variant="body2">
               + {teachers?.length} teachers
             </Link>
-          )}
-        </Stack>
+          )} 
+        </Stack>*/}
 
         <Divider
           sx={{
@@ -177,25 +207,32 @@ export default function ElearningCourseItem({ course, vertical }: Props) {
           direction="row"
           flexWrap="wrap"
           alignItems="center"
-          justifyContent="space-around" 
+          justifyContent="space-around"
           sx={{ color: 'text.disabled', '& > *:not(:last-child)': { mr: 2.5 } }}
         >
           <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-            <Iconify icon="carbon:time" sx={{ mr: 1 }} /> {`${projectDuration} jours`}
+            <Tooltip title="Durée du projet">
+              <IconButton>
+                <AccessTimeIcon />
+              </IconButton>
+            </Tooltip>
+            {`${duree_projet_apres_signature} jours`}
           </Stack>
 
           <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-            <Image
-              alt="icon"
-              src={
-                (projectFormulaChosen === 'basic' && '/assets/icons/pricing/ic_plan_basic03.svg') ||
-                (projectFormulaChosen === 'starter' &&
-                  '/assets/icons/pricing/ic_plan_starter03.svg') ||
-                '/assets/icons/pricing/ic_plan_premium03.svg'
-              }
-              sx={{ mr: 1, width: 20, height: 20 }}
-            />
-            plan : {projectFormulaChosen}
+            <Tooltip title="Plan sélectionné">
+              <Image
+                alt="icon"
+                src={
+                  (formule_choisie === 'basic' && '/assets/icons/pricing/ic_plan_basic03.svg') ||
+                  (formule_choisie === 'starter' &&
+                    '/assets/icons/pricing/ic_plan_starter03.svg') ||
+                  '/assets/icons/pricing/ic_plan_premium03.svg'
+                }
+                sx={{ mr: 1, width: 20, height: 20, cursor: 'pointer' }}
+              />
+            </Tooltip>
+            plan : {formule_choisie}
           </Stack>
         </Stack>
       </Stack>

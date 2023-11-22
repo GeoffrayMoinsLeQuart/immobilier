@@ -19,16 +19,17 @@ import MarketingLandingFaqs from '../landing/marketing-landing-faqs';
 import MarketingLandingAbout from '../landing/marketing-landing-about';
 import MarketingTestimonial from '../testimonial/marketing-testimonial';
 import PricingMarketing from '../../pricing/marketing/pricing-marketing';
-import MarketingLandingProcess from '../landing/marketing-landing-process';
-import MarketingLandingFreeSEO from '../landing/marketing-landing-free-seo';
 import MarketingLandingServices from '../landing/marketing-landing-services';
-import BlogMarketingLatestPosts from '../../blog/marketing/marketing-latest-posts';
-import MarketingLandingCaseStudies from '../landing/marketing-landing-case-studies';
 import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
+import ElearningContactInfo from 'src/sections/_elearning/contact/elearning-contact-info';
+import ElearningContactForm from 'src/sections/_elearning/contact/elearning-contact-form';
+import { projects } from 'src/_mock/projets';
 
 // ----------------------------------------------------------------------
 
 export default function MarketingLandingView() {
+  console.log(projects);
+
   return (
     <>
       {/* <MarketingLandingHero />
@@ -39,9 +40,9 @@ export default function MarketingLandingView() {
 
       <MarketingLandingServices /> */}
 
-      <ElearningLandingFeaturedCourses courses={_courses} />
+      {projects && <ElearningLandingFeaturedCourses projects={projects} />}
 
-      <MarketingTeam members={_members} />
+      {/* <MarketingTeam members={_members} />
 
       <PricingMarketing plans={_pricingMarketing} />
 
@@ -49,7 +50,9 @@ export default function MarketingLandingView() {
 
       <MarketingTestimonial testimonials={_testimonials} />
 
-      <MarketingNewsletter />
+      <ElearningContactInfo />
+
+      <ElearningContactForm /> */}
     </>
   );
 }

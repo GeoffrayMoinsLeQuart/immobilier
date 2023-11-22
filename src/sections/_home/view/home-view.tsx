@@ -7,15 +7,29 @@ import MainLayout from 'src/layouts/main';
 
 import ScrollProgress from 'src/components/scroll-progress';
 
-import HomeHero from '../home-hero';
-import HomeFAQs from '../home-faqs';
-import HomeNewStart from '../home-new-start';
-import HomeCombination from '../home-combination';
-import HomeForDesigner from '../home-for-designer';
-import HomeAdvertisement from '../home-advertisement';
-import PricingHome from '../../pricing/home/pricing-home';
-import HomeFeatureHighlights from '../home-feature-highlights';
-import HomeFlexibleComponents from '../home-flexible-components';
+import {
+  _brands,
+  _cities,
+  _members,
+  _caseStudies,
+  _testimonials,
+  _marketingPosts,
+  _pricingMarketing,
+  _courses,
+} from 'src/_mock';
+
+import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
+import ElearningContactInfo from 'src/sections/_elearning/contact/elearning-contact-info';
+import ElearningContactForm from 'src/sections/_elearning/contact/elearning-contact-form';
+import MarketingLandingHero from 'src/sections/_marketing/landing/marketing-landing-hero';
+import MarketingOurClients from 'src/sections/_marketing/marketing-our-clients';
+import MarketingLandingAbout from 'src/sections/_marketing/landing/marketing-landing-about';
+import MarketingLandingServices from 'src/sections/_marketing/landing/marketing-landing-services';
+import MarketingTeam from 'src/sections/_marketing/team/marketing-team';
+import PricingMarketing from 'src/sections/pricing/marketing/pricing-marketing';
+import MarketingLandingFaqs from 'src/sections/_marketing/landing/marketing-landing-faqs';
+import MarketingTestimonial from 'src/sections/_marketing/testimonial/marketing-testimonial';
+import { projects } from 'src/_mock/projets';
 
 // ----------------------------------------------------------------------
 
@@ -24,25 +38,29 @@ export default function HomeView() {
 
   return (
     <MainLayout>
-      <ScrollProgress scrollYProgress={scrollYProgress} />
+      {/* <ScrollProgress scrollYProgress={scrollYProgress} />
 
-      <HomeHero />
+      <MarketingLandingHero />
 
-      <HomeNewStart />
+      <MarketingOurClients cities={_cities} />
 
-      <HomeFlexibleComponents />
+      <MarketingLandingAbout />
 
-      <HomeFeatureHighlights />
+      <MarketingLandingServices /> */}
 
-      <HomeForDesigner />
+      <ElearningLandingFeaturedCourses projects={projects} />
 
-      <PricingHome plans={_pricingHome} />
+      {/* <MarketingTeam members={_members} />
 
-      <HomeFAQs />
+      <PricingMarketing plans={_pricingMarketing} />
 
-      <HomeCombination />
+      <MarketingLandingFaqs />
 
-      <HomeAdvertisement />
+      <MarketingTestimonial testimonials={_testimonials} />
+
+      <ElearningContactInfo />
+
+      <ElearningContactForm /> */}
     </MainLayout>
   );
 }

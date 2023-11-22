@@ -49,12 +49,12 @@ export const _pricingHome = [
   },
 ];
 
-const tarif = `à partir de ${formatCurrency(4000, 0)}`;
+const tarif = `à partir de ${formatCurrency(4865, 0)}`;
 
 export const _pricingMarketing = [
   {
     license: 'Basic',
-    price: formatCurrency(4000, 0),
+    price: formatCurrency(4865, 0),
     icon: '/assets/icons/pricing/ic_plan_basic03.svg',
     caption: 'Nous trouvons le bien idéal pour vous',
     options: [
