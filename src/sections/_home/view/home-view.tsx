@@ -2,7 +2,6 @@
 
 import { useScroll } from 'framer-motion';
 
-import { _pricingHome } from 'src/_mock';
 import MainLayout from 'src/layouts/main';
 
 import ScrollProgress from 'src/components/scroll-progress';
@@ -16,6 +15,7 @@ import {
   _marketingPosts,
   _pricingMarketing,
   _courses,
+  _pricingHome
 } from 'src/_mock';
 
 import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
@@ -38,7 +38,7 @@ export default function HomeView() {
 
   return (
     <MainLayout>
-      {/* <ScrollProgress scrollYProgress={scrollYProgress} />
+      <ScrollProgress scrollYProgress={scrollYProgress} />
 
       <MarketingLandingHero />
 
@@ -46,11 +46,11 @@ export default function HomeView() {
 
       <MarketingLandingAbout />
 
-      <MarketingLandingServices /> */}
+      <MarketingLandingServices />
 
       <ElearningLandingFeaturedCourses projects={projects} />
 
-      {/* <MarketingTeam members={_members} />
+      <MarketingTeam members={_members} />
 
       <PricingMarketing plans={_pricingMarketing} />
 
@@ -60,7 +60,7 @@ export default function HomeView() {
 
       <ElearningContactInfo />
 
-      <ElearningContactForm /> */}
+      <ElearningContactForm />
     </MainLayout>
   );
 }

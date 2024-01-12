@@ -33,6 +33,15 @@
     }
   },
   "rules": {
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "line": {
+          "markers": ["/"]
+        }
+      }
+    ],
     "no-alert": 0,
     "camelcase": 0,
     "no-console": 0,

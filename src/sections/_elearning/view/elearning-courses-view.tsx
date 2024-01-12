@@ -21,60 +21,60 @@ import ElearningCourseList from '../list/elearning-course-list';
 // ----------------------------------------------------------------------
 
 export default function ElearningCoursesView() {
-  const mobileOpen = useBoolean();
+  // const mobileOpen = useBoolean();
 
-  const loading = useBoolean(true);
+  // const loading = useBoolean(true);
 
-  useEffect(() => {
-    const fakeLoading = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      loading.onFalse();
-    };
-    fakeLoading();
-  }, [loading]);
+  // useEffect(() => {
+  //   const fakeLoading = async () => {
+  //     await new Promise((resolve) => setTimeout(resolve, 500));
+  //     loading.onFalse();
+  //   };
+  //   fakeLoading();
+  // }, [loading]);
 
-  return (
-    <>
-      <Container>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{
-            py: 5,
-          }}
-        >
-          <Typography variant="h2">Courses</Typography>
+  // return (
+  //   <>
+  //     <Container>
+  //       <Stack
+  //         direction="row"
+  //         alignItems="center"
+  //         justifyContent="space-between"
+  //         sx={{
+  //           py: 5,
+  //         }}
+  //       >
+  //         <Typography variant="h2">Courses</Typography>
 
-          <Button
-            color="inherit"
-            variant="contained"
-            startIcon={<Iconify icon="carbon:filter" width={18} />}
-            onClick={mobileOpen.onTrue}
-            sx={{
-              display: { md: 'none' },
-            }}
-          >
-            Filters
-          </Button>
-        </Stack>
+  //         <Button
+  //           color="inherit"
+  //           variant="contained"
+  //           startIcon={<Iconify icon="carbon:filter" width={18} />}
+  //           onClick={mobileOpen.onTrue}
+  //           sx={{
+  //             display: { md: 'none' },
+  //           }}
+  //         >
+  //           Filters
+  //         </Button>
+  //       </Stack>
 
-        <Stack direction={{ xs: 'column', md: 'row' }}>
-          <ElearningFilters open={mobileOpen.value} onClose={mobileOpen.onFalse} />
+  //       <Stack direction={{ xs: 'column', md: 'row' }}>
+  //         <ElearningFilters open={mobileOpen.value} onClose={mobileOpen.onFalse} />
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              pl: { md: 8 },
-              width: { md: `calc(100% - ${280}px)` },
-            }}
-          >
-            <ElearningCourseList courses={_courses} loading={loading.value} />
-          </Box>
-        </Stack>
-      </Container>
+  //         <Box
+  //           sx={{
+  //             flexGrow: 1,
+  //             pl: { md: 8 },
+  //             width: { md: `calc(100% - ${280}px)` },
+  //           }}
+  //         >
+  //           <ElearningCourseList courses={_courses} loading={loading.value} />
+  //         </Box>
+  //       </Stack>
+  //     </Container>
 
-      <ElearningNewsletter />
-    </>
-  );
+  //     <ElearningNewsletter />
+  //   </>
+  // );
 }

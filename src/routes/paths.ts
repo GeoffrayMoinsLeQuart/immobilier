@@ -69,7 +69,6 @@ export const paths = {
   loginIllustration: '/auth/login-illustration',
   registerCover: '/auth/register-cover',
   registerBackground: '/auth/register-background',
-  registerIllustration: '/auth/register-illustration',
   forgotPassword: '/auth/forgot-password',
   verify: '/auth/verify',
   // Common

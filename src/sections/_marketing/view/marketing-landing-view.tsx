@@ -11,6 +11,10 @@ import {
   _courses,
 } from 'src/_mock';
 
+import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
+import ElearningContactInfo from 'src/sections/_elearning/contact/elearning-contact-info';
+import ElearningContactForm from 'src/sections/_elearning/contact/elearning-contact-form';
+import { projects } from 'src/_mock/projets';
 import MarketingTeam from '../team/marketing-team';
 import MarketingNewsletter from '../marketing-newsletter';
 import MarketingOurClients from '../marketing-our-clients';
@@ -20,15 +24,10 @@ import MarketingLandingAbout from '../landing/marketing-landing-about';
 import MarketingTestimonial from '../testimonial/marketing-testimonial';
 import PricingMarketing from '../../pricing/marketing/pricing-marketing';
 import MarketingLandingServices from '../landing/marketing-landing-services';
-import ElearningLandingFeaturedCourses from 'src/sections/_elearning/landing/elearning-landing-featured-courses';
-import ElearningContactInfo from 'src/sections/_elearning/contact/elearning-contact-info';
-import ElearningContactForm from 'src/sections/_elearning/contact/elearning-contact-form';
-import { projects } from 'src/_mock/projets';
 
 // ----------------------------------------------------------------------
 
 export default function MarketingLandingView() {
-  console.log(projects);
 
   return (
     <>
@@ -40,7 +39,7 @@ export default function MarketingLandingView() {
 
       <MarketingLandingServices /> */}
 
-      {projects && <ElearningLandingFeaturedCourses projects={projects} />}
+      {/* {projects && <ElearningLandingFeaturedCourses projects={projects} />} */}
 
       {/* <MarketingTeam members={_members} />
 

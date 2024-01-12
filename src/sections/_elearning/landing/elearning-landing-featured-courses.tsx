@@ -10,8 +10,8 @@ import Carousel, { useCarousel, CarouselArrows } from 'src/components/carousel';
 
 import { ICourseProps } from 'src/types/course';
 
-import ElearningCourseItem from '../list/elearning-course-item';
 import { IProjet } from 'src/_mock/projets';
+import ElearningCourseItem from '../list/elearning-course-item';
 
 // ----------------------------------------------------------------------
 

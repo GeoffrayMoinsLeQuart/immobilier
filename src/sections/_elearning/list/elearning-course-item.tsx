@@ -42,7 +42,7 @@ function SlackUnit({ title, amount }: { title: string; amount?: number }) {
         <Typography variant="body2" sx={{ ml: 1, mr: 0.5 }}>
           {title}
         </Typography>
-        <Box sx={{ typography: 'h6' }}></Box>
+        <Box sx={{ typography: 'h6' }} />
         <Stack direction="row" sx={{ typography: 'subtitle2' }}>
           {amount && amount}
         </Stack>
@@ -88,7 +88,7 @@ export default function ElearningCourseItem({ project, vertical }: Props) {
     images_avant,
     images_apres,
     rentabilite_nette,
-    rentabilite_brute
+    rentabilite_brute,
   } = project;
 
   console.log(project);
@@ -148,10 +148,10 @@ export default function ElearningCourseItem({ project, vertical }: Props) {
             </Typography>
 
             <Tooltip title="Rentabilité nette du projet" sx={{ cursor: 'pointer' }}>
-              <Typography variant="h4">{rentabilite_nette + '%'}</Typography>
+              <Typography variant="h4">{`${rentabilite_nette} + %`}</Typography>
             </Tooltip>
             <Tooltip title="Rentabilité brute du projet" sx={{ cursor: 'pointer' }}>
-              <Typography variant="h4">{rentabilite_brute + '%'}</Typography>
+              <Typography variant="h4">{`${rentabilite_brute} + %`}</Typography>
             </Tooltip>
           </Stack>
 
@@ -179,7 +179,7 @@ export default function ElearningCourseItem({ project, vertical }: Props) {
         <SlackUnit title="Coût total" amount={prix_achat} />
         <SlackUnit title="Location mensuelle" amount={loyer_mensuel} />
 
-        {/* <Stack direction="row" alignItems="center">
+        {   /* <Stack direction="row" alignItems="center">
           <Avatar src={teachers[0]?.avatarUrl} />
 
           <Typography variant="body2" sx={{ ml: 1, mr: 0.5 }}>

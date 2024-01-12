@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 function rentabilite_brute_calculation(
   loyer: number,
   cout_achat: number,
@@ -41,8 +42,8 @@ function rentabilite_nette_calculation(
 }
 
 function create_final_projects(projects_drafts: IProjet[]) {
-  let result: IProjet[] = [];
-  for (let index = 0; index < projects_drafts.length; index++) {
+  const result: IProjet[] = [];
+  for (let index: number = 0; index < projects_drafts.length; index++) {
     const element = projects_drafts[index];
     element.rentabilite_brute = rentabilite_brute_calculation(
       element.loyer_mensuel,

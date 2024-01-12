@@ -91,7 +91,6 @@ export const pageLinks = [
       { title: 'Login Illustration', path: paths.loginIllustration },
       { title: 'Login Background', path: paths.loginBackground },
       { title: 'Register Cover', path: paths.registerCover },
-      { title: 'Register Illustration', path: paths.registerIllustration },
       { title: 'Register Background', path: paths.registerBackground },
       { title: 'Forgot Password', path: paths.forgotPassword },
       { title: 'Verify Code', path: paths.verify },

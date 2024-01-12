@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function ElearningCoursePage() {
-  return <ElearningCourseView />;
+  // return <ElearningCourseView />;
 }
